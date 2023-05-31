@@ -1,9 +1,7 @@
 import { FC, ReactElement } from 'react'
 
 import { Button } from 'react-bootstrap'
-import {
-  ErrorBoundary
-} from 'components'
+import { ErrorBoundary } from 'components'
 
 const App: FC = (): ReactElement => {
   return (

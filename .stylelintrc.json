@@ -1,7 +1,6 @@
 {
   "extends": [
-    "stylelint-config-standard-scss",
-    "stylelint-config-idiomatic-order"
+    "stylelint-config-standard-scss"
   ],
   "plugins": [
     "stylelint-use-nesting"
@@ -12,5 +11,5 @@
     "scss/selector-no-redundant-nesting-selector": true,
     "csstools/use-nesting": "always"
   },
-  "ignoreFiles": ["dist/**/*.*", "coverage/**/*.*"]
+  "ignoreFiles": ["back-end/**/*.*", "coverage/**/*.*"]
 }

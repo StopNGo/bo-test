@@ -36,6 +36,6 @@
   "ts-node": {
     "compilerOptions": { "module": "commonjs" }
   },
-  "include": ["front-end/src", "webpack", "webpack.config.ts"],
+  "include": ["front-end", "webpack", "webpack.config.ts"],
   "exclude": ["node_modules", "**/*.js"],
 }

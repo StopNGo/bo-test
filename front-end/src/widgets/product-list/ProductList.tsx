@@ -15,16 +15,17 @@ const ProductList: FC<IProductList> = ({
 }): ReactElement => (
   <Container className={className}>
     <Row className='justify-content-center'>
-      {products != null &&
+      {products != null && (
         <>
-          {products.map(product => (
+          {products.map((product) => (
             <Col key={product.id} xs={12} sm={6} md={4} lg={3}>
               <div style={{ margin: '10px', padding: '10px' }}>
                 <ProductCard key={product.id} product={product} />
               </div>
             </Col>
           ))}
-        </>}
+        </>
+      )}
     </Row>
   </Container>
 )

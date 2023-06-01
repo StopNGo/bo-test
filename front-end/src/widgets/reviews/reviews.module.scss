@@ -1,0 +1,13 @@
+.reviews {
+  padding: 40px;
+  background-color: #e8ecee;
+
+  :global(a) {
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  .form {
+    margin-top: 30px;
+  }
+}

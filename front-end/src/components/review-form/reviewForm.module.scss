@@ -1,0 +1,58 @@
+.form {
+  :global(.row) {
+    margin-bottom: 10px;
+  }
+
+  :global(input),
+  :global(textarea) {
+    font-size: 12px;
+    border: solid 1px #c8d2d5;
+  }
+
+  :global(textarea) {
+    display: block;
+    width: 100%;
+    resize: none;
+    padding: 10px;
+  }
+
+
+  :global(input):not([type='checkbox']){
+    width: 100%;
+    padding: 10px;
+  }
+
+  :global(label) {
+    font-size: 12px;
+  }
+
+  :global(.form-check) {
+    display: flex;
+    align-items: center;
+  }
+
+  :global(input):is([type='checkbox']){
+    margin-top: -1px;
+    margin-right: 10px;
+  }
+
+  .error {
+    font-size: 8px;
+    color: red;
+  }
+
+  button {
+    border: none;
+    background-color: var(--bs-primary);
+    padding: 10px 30px;
+    border-radius: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  .note {
+    font-size: 12px;
+  }
+}

@@ -1,5 +1,12 @@
 import { FC, ReactElement, MouseEvent, useState } from 'react'
-import { Card, Button, Image, OverlayTrigger, Tooltip, Form } from 'react-bootstrap'
+import {
+  Card,
+  Button,
+  Image,
+  OverlayTrigger,
+  Tooltip,
+  Form
+} from 'react-bootstrap'
 import cn from 'classnames'
 
 import { IProduct } from 'api/models'
@@ -24,7 +31,7 @@ const ProductCard: FC<IProductCard> = ({
 
   return (
     <div onClick={onClick} className={cn(className, styles.product)}>
-      {product != null &&
+      {product != null && (
         <Card>
           <Card.Body>
             <div className={styles.image}>
@@ -33,8 +40,15 @@ const ProductCard: FC<IProductCard> = ({
               <div className={styles.room}>Shop by Room</div>
               <div className={styles.details}>Product Details</div>
             </div>
-            <OverlayTrigger placement='top' overlay={<Tooltip id='tooltip'>Add to Favorites</Tooltip>}>
-              <Button variant='link' className={styles.fav} onClick={() => setIsFavorite(!isFavorite)}>
+            <OverlayTrigger
+              placement='top'
+              overlay={<Tooltip id='tooltip'>Add to Favorites</Tooltip>}
+            >
+              <Button
+                variant='link'
+                className={styles.fav}
+                onClick={() => setIsFavorite(!isFavorite)}
+              >
                 <FavoritesIcon active={isFavorite} />
               </Button>
             </OverlayTrigger>
@@ -44,13 +58,20 @@ const ProductCard: FC<IProductCard> = ({
             </div>
             <div className={styles.series}>{product.series}</div>
             <div className='d-flex justify-content-between'>
-              <div className={styles.available}>{product.available && (<span>Available Now</span>)}</div>
-              <Form.Check className={styles.compare} type='checkbox' label='Compare' reverse />
+              <div className={styles.available}>
+                {product.available && <span>Available Now</span>}
+              </div>
+              <Form.Check
+                className={styles.compare}
+                type='checkbox'
+                label='Compare'
+                reverse
+              />
             </div>
           </Card.Body>
-        </Card>}
+        </Card>
+      )}
     </div>
-
   )
 }
 

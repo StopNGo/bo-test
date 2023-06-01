@@ -1,6 +1,6 @@
 import { RouteObject } from 'react-router-dom'
 
-import { Main, ProductsPage } from 'pages'
+import { Main, ProductsPage, ReviewsPage } from 'pages'
 
 const routes: RouteObject[] = [
   {
@@ -10,6 +10,10 @@ const routes: RouteObject[] = [
   {
     path: '/products',
     element: <ProductsPage />
+  },
+  {
+    path: '/reviews',
+    element: <ReviewsPage />
   }
 ]
 

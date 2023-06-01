@@ -1,6 +1,3 @@
-@import 'reset';
-@import 'variables';
-@import 'mixins';
-@import 'theme';
-@import 'utils';
-@import 'common';
+$primary: #446671;
+
+@import "~bootstrap/scss/bootstrap";

@@ -32,6 +32,16 @@ const universalLoader = (isServer: boolean = false): RuleSetRule => ({
           }
         },
         {
+          loader: 'postcss-loader',
+          options: {
+            postcssOptions: {
+              plugins: () => [
+                require('autoprefixer')
+              ]
+            }
+          }
+        },
+        {
           loader: 'sass-loader'
         }
       ]

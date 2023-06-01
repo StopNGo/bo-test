@@ -1,15 +1,15 @@
 import { FC, ReactElement } from 'react'
+import { useRoutes } from 'react-router-dom'
 
-import { Button } from 'react-bootstrap'
 import { ErrorBoundary } from 'components'
+import { routes } from 'router/Router'
 
 const App: FC = (): ReactElement => {
+  const content = useRoutes(routes)
+
   return (
     <ErrorBoundary>
-      <div>
-        Hello World
-        <Button>Test</Button>
-      </div>
+      {content}
     </ErrorBoundary>
   )
 }

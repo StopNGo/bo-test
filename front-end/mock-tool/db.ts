@@ -1,12 +1,15 @@
 interface IProduct {
   id: number
   name: string
+  image: string
+  altImage: string
   series: string
   price: number
   available: boolean
+  favorite: boolean
 }
 
-type TRating = 0 | 0.5 | 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 4.5 | 5
+type TRating = 0 | 1 | 2 | 3 | 4 | 5
 
 interface IReview {
   id: number
@@ -26,72 +29,102 @@ export const data: IData = {
     {
       id: 1,
       name: 'Mystic Midnight',
+      image: 'images/img1.jpg',
+      altImage: 'images/img2.jpg',
       series: 'Luminous Dreams',
       price: 176.24,
-      available: true
+      available: true,
+      favorite: false
     },
     {
       id: 2,
       name: 'Luminous Lagoon',
+      image: 'images/img1.jpg',
+      altImage: 'images/img2.jpg',
       series: 'Luminous Dreams',
       price: 123.45,
-      available: false
+      available: false,
+      favorite: false
     },
     {
       id: 3,
       name: 'Whispering Willow',
+      image: 'images/img1.jpg',
+      altImage: 'images/img2.jpg',
       series: 'Luminous Dreams',
       price: 199.99,
-      available: true
+      available: true,
+      favorite: false
     },
     {
       id: 4,
       name: 'Enchanted Elixir',
+      image: 'images/img1.jpg',
+      altImage: 'images/img2.jpg',
       series: 'Mystical Aura',
       price: 155.75,
-      available: false
+      available: false,
+      favorite: false
     },
     {
       id: 5,
       name: 'Radiant Rosewood',
+      image: 'images/img1.jpg',
+      altImage: 'images/img2.jpg',
       series: 'Mystical Aura',
       price: 111.11,
-      available: true
+      available: true,
+      favorite: false
     },
     {
       id: 6,
       name: 'Glistening Grotto',
+      image: 'images/img1.jpg',
+      altImage: 'images/img2.jpg',
       series: 'Luminous Dreams',
       price: 187.63,
-      available: false
+      available: false,
+      favorite: false
     },
     {
       id: 7,
       name: 'Serenity Springs',
+      image: 'images/img1.jpg',
+      altImage: 'images/img2.jpg',
       series: 'Mystical Aura',
       price: 134.67,
-      available: true
+      available: true,
+      favorite: false
     },
     {
       id: 8,
       name: 'Golden Gleam',
+      image: 'images/img1.jpg',
+      altImage: 'images/img2.jpg',
       series: 'Mystical Aura',
       price: 189.0,
-      available: false
+      available: false,
+      favorite: false
     },
     {
       id: 9,
       name: 'Twilight Tranquility',
+      image: 'images/img1.jpg',
+      altImage: 'images/img2.jpg',
       series: 'Luminous Dreams',
       price: 143.88,
-      available: true
+      available: true,
+      favorite: false
     },
     {
       id: 10,
       name: 'Opalescent Opulence',
+      image: 'images/img1.jpg',
+      altImage: 'images/img2.jpg',
       series: 'Mystical Aura',
       price: 198.12,
-      available: true
+      available: true,
+      favorite: false
     }
   ],
   reviews: [

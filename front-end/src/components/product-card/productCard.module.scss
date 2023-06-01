@@ -1,0 +1,112 @@
+.product {
+  width: 230px;
+  height: 330px;
+
+  :global(.card) {
+    border-radius: 0;
+
+    &:not(:hover) {
+      border-color: transparent;
+    }
+  }
+
+  :global(.card-body) {
+    height: 100%;
+  }
+
+
+  .image {
+    width: 100%;
+    height: 245px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .alt {
+      display: none;
+    }
+  }
+
+  .fav {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+
+    svg {
+      width: 25px;
+      height: auto;
+    }
+  }
+
+  .details {
+    display: none;
+    position: absolute;
+    left: 10px;
+    bottom: 5px;
+    font-size: 20px;
+    text-decoration: underline;
+    color: #fff;
+  }
+
+  .room {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 10px;
+    color: #fff;
+    background-color: var(--bs-primary);
+    padding: 5px 10px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .series {
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
+
+  .available,
+  .compare {
+    font-size: 10px;
+  }
+
+  .available span::before {
+    content: '';
+    display: inline-block;
+    margin-right: 3px;
+    height: 8px;
+    width: 8px;
+    background-color: #60b076;
+    border-radius: 50%;
+  }
+
+  :hover {
+    .main {
+      display: none;
+    }
+
+    .alt {
+      display: block;
+    }
+
+    .details,
+    .room {
+      display: block;
+    }
+  }
+}
+

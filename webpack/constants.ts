@@ -15,6 +15,7 @@ const ALIAS: Record<string, string> = {
   api: `${SRC_DIR}/api`,
   assets: `${SRC_DIR}/assets`,
   components: `${SRC_DIR}/components`,
+  widgets: `${SRC_DIR}/widgets`,
   images: `${SRC_DIR}/assets/images`,
   pages: `${SRC_DIR}/pages`,
   router: `${SRC_DIR}/router`,

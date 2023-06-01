@@ -11,6 +11,7 @@ import CssoWebpackPlugin from 'csso-webpack-plugin'
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import CopyPlugin from 'copy-webpack-plugin'
 import 'webpack-dev-server'
 
 import { ALIAS, DEV_SERVER_PORT, DIST_DIR, IS_DEV, IS_LAZY_COMPILATION, SRC_DIR } from './constants'
@@ -47,7 +48,16 @@ const plugins: WebpackPluginInstance[] = [
         new BundleAnalyzerPlugin({
           analyzerMode: withReport ? 'server' : 'disabled'
         })
-      ])
+      ]),
+  new CopyPlugin({
+    patterns: [
+      {
+        from: `${SRC_DIR}/assets/images`,
+        to: 'images'
+      }
+    ]
+  })
+
 ]
 
 const clientConfig: Configuration = {
